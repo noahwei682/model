@@ -49,7 +49,16 @@ conda install -c conda-forge ftfy
 
 pip install --upgrade huggingface-hub
 conda install -c conda-forge wandb --yes
-wandb login a0686d210ceba8f713f6cd85c5dcf3621b7f15e7                      
+wandb login a0686d210ceba8f713f6cd85c5dcf3621b7f15e7
+export PRE_DATA=/blob/weiwei/codes/llava_aoqi/playground/data/LLaVA-Pretrain/blip_laion_cc_sbu_558k.json                  <!-- 替换hf下载的json路径-->
+export PRE_IMAGE=/blob/weiwei/codes/llava_dynaCrossClipOfflinetext/llava_aoqi/playground/data/LLaVA-Pretrain/images       <!-- 替换hf下载的图片路径-->
+export PRE_EMB=/blob/weiwei/text_embedding/blip_laion_cc_sbu_558k.pt                                                      <!-- 替换hf下载的embedding checkpoint路径-->
+export OUT_DIR_REPFIX=/blob/weiwei/llava_checkpoint/llava-v1.5-7b                                                         <!-- 替换模型保存路径prefix-->
+export FINE_DATA=/blob/weiwei/codes/llava_aoqi/playground/data/llava_v1_5_mix665k.json                                    <!-- 替换hf下载的json路径-->
+export FINE_EMB=/blob/weiwei/text_embedding/llava_v1_5_mix665k.pt                                                         <!-- 替换hf下载的embedding checkpoint路径-->
+export FINE_IMAGE=/blob/weiwei/codes/llava_aoqi/playground/data                                                           <!-- 替换hf下载的图片路径-->
+export MLP_CKPT_PREFIX=/blob/weiwei/llava_checkpoint/llava-v1.5-7b                                                        <!-- 替换模型保存路径prefix-->
+export MODEL_CKPT_DIR=/blob/weiwei/llava_checkpoint/llava-v1.5-7b                                                         <!-- 替换模型保存路径prefix-->
 export CKPT_DIR=EVA02-CLIP-L-14-336-LLaVA_EWC                    
 export PRETRAIN_JSON=blip_laion_cc_sbu_558k.json
 export EVA_CKPT=/blob/weiwei/logs/EVA-CLIP/cross_attention/T_vit_1024x4_lr1e-5_Rcc12mR_Rcc3m_Rdatacamp-2024_09_16-21/checkpoints/epoch_2/mp_rank_00_model_states.pt     <!-- 替换hf下载的视觉模型路径-->
