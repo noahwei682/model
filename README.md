@@ -1,5 +1,6 @@
 # model
 
+```
 cd ~
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 sh Miniconda3-latest-Linux-x86_64.sh -b -p ~/miniconda3
@@ -55,3 +56,4 @@ export EVA_CKPT=/blob/weiwei/logs/EVA-CLIP/cross_attention/T_vit_1024x4_lr1e-5_R
 bash ./scripts/v1_5/eval/check_ckpt_dit.sh
 export OPENAI_KEY=06e3e62fff2245c0b2e982f33a65cb11 
 PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True bash run_all.sh
+```
